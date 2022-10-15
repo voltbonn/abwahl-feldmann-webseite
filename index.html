@@ -197,6 +197,8 @@
         </details>
       </section>
     </main>
+    
+    <script src="./langneg.js"></script>
     <script src="./js-yaml.min.js"></script>
     
     <script>
@@ -213,6 +215,10 @@
               element.innerHTML = translated_texts[current_locale][key].replace(/\n/g, '<br>')
             }
           })
+
+          if (translated_texts[current_locale].title) {
+            document.title = translated_texts[current_locale].title
+          }
         }
       }
       async function loadTexts() {
@@ -224,14 +230,13 @@
           delete data.texts // don't need this in the cache anymore
           delete translated_texts._ // the default
           locales = Object.keys(translated_texts).sort()
-          translateTexts()
+          setClientLocale()
           setLocaleChooser()
+          translateTexts()
         } catch (error) {
           console.log(error)
         }
       }
-      loadTexts()
-
       function setLocaleChooser() {
         const localeChooser = document.getElementById('locale_chooser')
         if (localeChooser) {
@@ -249,7 +254,21 @@
           })
         }
       }
+      function setClientLocale(){
+        const supportedLocales = window.negotiateLanguages(
+          navigator.languages,  // requested locales
+          locales,              // available locales
+          {
+            defaultLocale: 'de',
+            strategy: 'lookup',
+          }
+        );
 
+        current_locale = supportedLocales[0]
+        return current_locale
+      }
+
+      loadTexts()
     </script>
 
   </body>
