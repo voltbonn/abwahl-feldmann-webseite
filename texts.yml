@@ -1,5 +1,6 @@
 texts:
   de:
+    locale_name: Deutsch
     title: Informationen zur Abwahl von Oberbürgermeister Feldmann
     slogan: Am 06.11.2022 mit JA stimmen!
     postal_voting_button: Briefwahl ab 26.09
@@ -8,21 +9,22 @@ texts:
       Für einen Neuanfang in Frankfurt.
       Mit Respekt vor dem Amt des Stadtoberhauptes.
 
-      Du kannst es ermöglichen, indem Du per Briefwahl oder im Wahllokal mit Ja! für Frankfurt stimmst.
+      Du kannst es ermöglichen, indem Du per Briefwahl oder im Wahllokal mit <strong>Ja! für Frankfurt stimmst.</strong>
 
-      Damit machst Du den Weg für die Neuwahl frei.
+      <strong>Damit machst Du den Weg für die Neuwahl frei.</strong>
 
       Wir brauchen an der Spitze der Stadt eine Persönlichkeit, die sich mit ganzer Kraft für Frankfurt einsetzt, keinen Oberbürgermeister, der Angeklagter in einem Strafprozess ist.
 
       Wir rufen alle Vereine, Organisationen, Verbände, Gewerkschaften, Unternehmen und Institutionen auf, für eine Teilnahme an dieser für Frankfurt so wichtigen Entscheidung am 6. November einzutreten.
 
-      Wir rufen alle wahlberechtigten Bürgerinnen und Bürger auf: Nutze Dein Wahlrecht!
+      <strong>Wir rufen alle wahlberechtigten Bürgerinnen und Bürger auf: Nutze Dein Wahlrecht!
       Per Briefwahl oder im Wahllokal.
-      Es kommt auf Deine Stimme für Frankfurt an. Stimme mit Ja! für Frankfurt.
+      Es kommt auf Deine Stimme für Frankfurt an. Stimme mit Ja! für Frankfurt.</strong>
 
       Frankfurt, das sind wir alle gemeinsam.
-      Und wir alle gemeinsam haben es in der Hand: Nutzen wir den 6. November 2022 für einen gemeinsamen Neustart, machen wir von unserem demokratischen Recht Gebrauch.
+      Und wir alle gemeinsam haben es in der Hand: Nutzen wir den <strong>6. November 2022</strong> für einen gemeinsamen Neustart, machen wir von unserem demokratischen Recht Gebrauch.
   en:
+    locale_name: English
     title: Information on the deselection of Mayor Feldmann in English
     slogan: Vote yes on 06.11.2022 
     postal_voting_button: Postal voting starts on 26.11.2022
@@ -30,22 +32,201 @@ texts:
       Recall Mayor Feldmann.
       For a new beginning in Frankfurt.
       With respect for the office of the city leader.
-      
+
       You can make it possible by voting <strong>Yes! for Frankfurt by postal ballot or at the polling station.</strong>
-      
+
       <strong>In doing so, you clear the way for the new election.</strong>
-      
+
       We need a person at the head of the city who is fully committed to Frankfurt, not a mayor who is a defendant in a criminal trial.
-      
+
       We call on all clubs, organisations, associations, trade unions, companies and institutions to stand up for participating in this decision on 6 November, which is so important for Frankfurt.
-      
+
       <strong>We call on all citizens who are entitled to vote: Use your right to vote!
       Vote by postal ballot or at the polling station.
       It all depends on your vote for Frankfurt. Vote Yes! for Frankfurt.</strong>
-      
+
       Frankfurt, that's all of us together.
-      And it is up to all of us: let's use our chance on 6 November 2022 for a new start together, let's make use of our democratic right.
+      And it is up to all of us: let's use our chance on <strong>6 November 2022</strong> for a new start together, let's make use of our democratic right.
+  ar:
+    locale_name: Arabic
+    title: |-
+      معلومات عن إلغاء اختيار عمدة البلدية فيلدمان
+      باللغة العربية
+    slogan: |-
+      بتاريخ 11/06/2022
+      التصويت نعم!
+    postal_voting_button: |-
+      تصويت بريدي 
+      من 26.09.
+    intro: |-
+      الغاء اختيار رئيس البلدية فيلدمان.
+      لبداية جديدة في فرانكفورت. 
+      مع احترام منصب رئيس بلدية المدينة.
+
+      يمكنك جعل ذلك ممكنًا عن طريق إرسال ملف
+      التصويت البريدي أو في محطة الاقتراع مع نعم!
+      صوت لفرانكفورت.
+
+      هذا يمهد الطريق لانتخابات جديدة.
+
+      نحن بحاجة إلى شخصية على رأس المدينة ملتزمة بكل قوتها تجاه فرانكفورت ، وليس رئيس بلدية يُدّعى عليه في محاكمة جنائية.
+
+      ندعو جميع الاتحادات والمنظمات والجمعيات والنوادي والشركات والمؤسسات للمشاركة في هذا القرار المهم لفرانكفورت يوم 6 نوفمبر.
+
+      ندعو جميع المواطنين الذين يحق لهم التصويت: استخدم حقك في التصويت!
+      عن طريق التصويت البريدي أو في محطة الاقتراع.
+      هذا يعتمد على تصويتك لفرانكفورت. التصويت نعم! لفرانكفورت.
+
+      فرانكفورت، هي نحن جميعاً.
+      ونحن جميعًا في أيدينا: جعل 6 نوفمبر 2022  بداية جديدة معًا ، فلنستفيد من حقوقنا الديمقراطية.
+  hr:
+    locale_name: Croatian
+    title: Informacija o opozivu gradonačelnika Feldmanna na hrvatskom jeziku.
+    slogan: 06.11.2022. svojim DA!
+    postal_voting_button: Poziv na glasovanje od 26.09.
+    intro: |-
+      Smijenite gradonačelnika Feldmanna.
+      Za novi početak u Frankfurtu.
+      S poštovanjem prema položaju voditelja grada.
+
+      Ti to možeš omogućiti, tako da daš svoje DA! <strong>Za Frankfurt na biračkom mjestu.</strong>
+
+      <strong>Tako utireš put za novi izbor.</strong>
+
+      Treba nam netko na vrhu grada tko je svim silama privržen Frankfurtu, ne želimo gradonačelnika, optuženog u kaznenom postupku.
+
+      Pozivamo sve klubove, organizacije, udruge, saveze, tvrtke i institucije da sudjeluju u ovoj važnoj odluci za Frankfurt <strong>6. studenog.</strong>
+
+      <strong>Pozivamo sve građane s pravom glasa: Iskoristite svoje pravo glasa!
+      Glasovanje poštom ili na biračkom mjestu.
+      Ovisi o vašem glasu za Frankfurt. Glasajte Da! za Frankfurt.</strong>
+
+      Frankfurt, to smo mi svi.
+      Naš je grad u našim rukama: Iskoristimo izbore <strong>6. studenoga 2022.<strong> za novi početak zajedno, iskoristimo svoja demokratska prava.
+  ru:
+    locale_name: Russian
+    title: Информация на русском языке о референдуме для снятия с должности мэра Фельдмана
+    slogan: 06.11.2022 выбери «ДА»!
+    postal_voting_button: Заочное голосование с 26.09.
+    intro: |-
+      Снимем с должности мэра Фельдмана.
+      За новый старт для Франкфурта.
+      С уважением к посту главы города.
+
+      <strong>Голосуй за Франкфурт! Для этого при заочном голосовании или на избирательном участке отметь в бюллетене вариант «Да».</strong>
+
+      <strong>Так ты поможешь добиться перевыборов мэра.</strong>
+
+      Мы хотим видеть во главе нашего города человека, который делает все возможное для блага Франкфурта, а не обвиняемого по уголовному делу.
+
+      Призываем все объединения, организации, ассоциации, профсоюзы, фирмы и учреждения агитировать людей за участие в принятии этого решения 6 ноября.
+
+      <strong>Призываем всех горожан, имеющих право голоса, воспользоваться им!
+      Заочно или на избирательном участке.
+      Франкфурту нужен твой голос. Проголосуй за Франкфурт — отметь вариант «Да»!</strong>
+
+      Франкфурт — это все мы.
+      Поэтому все в наших руках: давайте <strong>6 ноября 2022 года</strong> дадим новый старт нашему городу и реализуем право, данное нам демократией.
+  pl:
+    locale_name: Polish
+    title: Informacje na temat głosowania za odwołaniem nadburmistrza Feldmanna w języku polskim
+    slogan: 06.11.2022 r. zagłosuj na TAK!
+    postal_voting_button: Głosowanie korespondencyjne od 26.09.
+    intro: |-
+      Głosowanie za odwołaniem nadburmistrza Feldmanna.
+      Dla nowego początku we Frankfurcie.
+      Z szacunku dla urzędu włodarza miasta.
+
+      Możesz to umożliwić, głosując na <strong>Tak! dla Frankfurtu w głosowaniu korespondencyjnym lub w lokalu wyborczym.</strong>
+
+      <strong>W ten sposób otworzysz drogę do nowych wyborów.</strong>
+
+      Na czele miasta potrzebujemy osobowości, która w pełni zaangażuje się na rzecz Frankfurtu, a nie nadburmistrza, który jest oskarżonym w procesie karnym.
+
+      Wzywamy wszystkie kluby, organizacje, stowarzyszenia, związki zawodowe, przedsiębiorstwa oraz instytucje do aktywnego udziału w podjęciu tej tak ważnej dla Frankfurtu decyzji w dniu <strong>6 listopada.</strong>
+
+      <strong>Wzywamy wszystkich uprawnionych do głosowania obywateli: Skorzystaj ze swojego prawa do głosowania!
+      W głosowaniu korespondencyjnym lub w lokalu wyborczym.
+      Twój głos oddany na Frankfurt ma znaczenie. Zagłosuj na Tak! dla Frankfurtu.</strong>
+
+      Frankfurt to my wszyscy razem.
+      I wszyscy razem mamy jego przyszłość w swoich rękach: Wykorzystajmy <strong>6 listopada 2022 r.</strong>, żeby stworzyć wspólny nowy początek, skorzystajmy z naszego demokratycznego prawa.
+  fa:
+    locale_name: Persian (Fārsī) 
+    title: معلومات در باره انتخاب شهردار فیلدمن به زبان فارسی
+    slogan: در تاریخ ۰۶/۱۱/۲۰۲۲ با گزینه « بله» رای بدهید!
+    postal_voting_button: رای پستی از تاریخ ۲۶ سپتامبر 
+    intro: |-
+      انتخاب شهردار فیلدمن
+      برای یک شروع جدید در فرانکفورت.
+      با احترام به دفتر شهردار شهر
+
+      شما می توانید با یک رای «آری!» برای فرانکفورت، با ارسال رای پستی و یا با حضور در مراکز رای دهی این کار را امکان پذیر کنید.
+
+      با این کار شما راه را برای انتخابات جدید هموار می کنید.
+
+      ما به فردی در رهبری شهر خود نیاز داریم که کاملاً به فرانکفورت متعهد است، نه یک شهردار که در یکروند کیفری متهم است.
+
+      ما از همه انجمن ها،، سازمان ها،، اتحادیه ها، شرکت ها و نهادها می خواهیم که در تاریخ 6  نوامبر، روزی که برای فرانکفورت از اهمیت بالایی برخوردار است، از مشارکت در این تصمیم حمایت کنند.
+
+      درخواست ما از همه شهروندان واجد شرایط این است: از حق رای خود استفاده کنید!
+      با رای پستی یا حضور در محل رای گیری، رای دهید.
+      رای شما برای فرانکفورت مهم است. 
+      «بلی» بگویید! برای فرانکفورت
+
+      همه ما در این امر برای فرانکفورت متحد هستیم.
+      ما همه دست به دست هم می دهیم: 
+      بیایید از ۶ نوامبر ۲۰۲۲ برای شروعی جدید و متحد استفاده مطلوب کنیم. بیایید از حق دموکراتیک خود نهایت استفاده مطلوب نماییم.
+  tr:
+    locale_name: Türkçe
+    title: Türkçe lisasında Büyükşehir Belediye Başkanı Feldmann'ın başkanlıktan indirilmesi için enformasyonlar
+    slogan: 06.11.2022 tarihinde oyunu EVET olarak kullan
+    postal_voting_button: 26.09. dan itibaren Mektupla oy kullanma
+    intro: |-
+      Büyükşehir Belediye Başkanı Feldmann seçilmemeli.
+      Frankfurt’ta yeni bir başlangıç için.
+      Başkanlık makamına karşı saygı ile.
+
+      <strong>Mektupla veya seçim lokalinde Frankfurt için Evet! Oyu kullanarak</strong> sen bu duruma olanak sağlayabilirsin.
+
+      <strong>Böylece yeni bir seçim için gerekli olan yolu açmış olacaksın.</strong>
+
+      Bizim kentimizin başında bir davada davacı olan bir Büyükşehir Belediye Başkanına değil, Frankfurt için bütün gücüyle çalışan bir şahsiyete ihtiyacımız bulunmaktadır.
+
+      Bütün dernekleri, organizasyonları, federasyonları, sendikaları, işletmeleri ve kurumları Frankfurt için <strong>6 Kasım</strong> tarihinde alınacak olan bu önemli karara sahip çıkmaya çağırıyoruz.
+
+      <strong>Seçme hakkı bulunan bütün halkı çağırıyoruz: Seçme hakkını kullan! 
+      Mektupla veya seçim lokalinde.
+      Frankfurt için senin oyun büyük önem taşımaktadır. Frankfurt için oyunu Evet! Olarak kullan.</strong>
+
+      Biz hep birlikte Frankfurt‘uz.
+      Ve bu hep birlikte bizim elimizdedir: <strong>6. Kasım 2022</strong> tarihini müşterek bir yeni başlangıç için kullanalım, demokratik hakkımızı kullanalım.
+  'fa-AF':
+    locale_name: Dari Persian
+    title: معلومات در باره انتخاب شاروال فیلدمن به زبان دری
+    slogan: در تاریخ ۰۶/۱۱/۲۰۲۲ با گزینه « بلی» رای بدهید!
+    postal_voting_button: رای پستی از تاریخ ۲۶ سپتامبر 
+    intro: |-
+      انتخاب شاروال فیلدمن
+      برای یک شروع جدید در فرانکفورت.
+      با احترام به دفتر شاروال شهر
+
+      شما می توانید با یک رای «بلی!» برای فرانکفورت، با ارسال رای از طریق پست و یا با حضور در مراکز رای دهی این کار را امکان پذیر کنید.
+
+      با این کار شما راه را برای انتخابات جدید هموار می کنید.
+
+      ما به فردی در رهبری شهر خود نیاز داریم که کاملاً به فرانکفورت متعهد است، نه یک شاروال که در یکپروسه قضایي متهم است.
+
+      ما از همه انجمن ها، ارگان ها، اتحادیه ها، شرکت ها و نهادها می خواهیم که در تاریخ 6 نومبر، روزی که برای فرانکفورت از اهمیت بالایی برخوردار است، از مشارکت در این تصمیم حمایت کنند.
+
+      درخواست ما از همه شهروندان واجد شرایط این است: از حق رای خود استفاده کنید!
+      با رای پستی یا حضور در محل رای گیری، رای دهید.
+      رای شما برای فرانکفورت مهم است. «بلی» بگویید! برای فرانکفورت
+
+      همه ما در این امر برای فرانکفورت متحد هستیم.
+      ما همه دست به دست هم می دهیم: بیایید از ۶ نومبر ۲۰۲۲ برای آغاز جدید و متحد استفاده مطلوب کنیم. بیایید از حق دموکراتیک خود نهایت استفاده مطلوب نماییم. 
   _:
+    locale_name:
     title:
     slogan:
     postal_voting_button:

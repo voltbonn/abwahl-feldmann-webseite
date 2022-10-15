@@ -5,41 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Hier informieren wir als Bündnis zur Abwahl des Oberbürgermeisters in Frankfurt am Main.">
 
-    <script src="./js-yaml.min.js"></script>
-
-    <script>
-      var current_locale = 'de'
-      var translated_texts = {}
-
-      function translateTexts() {
-        console.log('translateTexts', translated_texts)
-        if (translated_texts[current_locale]) {
-          const elements = document.querySelectorAll('[data-i18n]')
-          console.log('elements', elements)
-          elements.forEach(element => {
-            const key = element.getAttribute('data-i18n')
-            if (translated_texts[current_locale][key]) {
-              element.innerHTML = translated_texts[current_locale][key].replace(/\n/g, '<br>')
-            }
-          })
-        }
-      }
-      async function loadTexts() {
-        try {
-          const response = await fetch('./texts.yml')
-          const texts = await response.text()
-          const data = jsyaml.load(texts)
-          translated_texts = data.texts
-          delete data.texts // don't need this in the cache anymore
-          delete translated_texts._ // the default
-          translateTexts()
-        } catch (error) {
-          console.log(error)
-        }
-      }
-      loadTexts()
-    </script>
-
     <style>
       :root {
         --foreground-color: #111;
@@ -170,9 +135,15 @@
   <body>
     <main>
       <section>
-        <h1 data-i18n="title">Abwahl von OB Feldmann.</h1>
-        <h2 data-i18n="slogan">Am 06.11.2022 mit JA stimmen!</h2>
-        <p data-i18n="intro">
+        <br />
+        <br />
+        <select id="locale_chooser"></select>
+
+        <h1 data-i18n="title" dir="auto">Abwahl von OB Feldmann.</h1>
+        <h2 data-i18n="slogan" dir="auto">Am 06.11.2022 mit JA stimmen!</h2>
+        
+        
+        <p data-i18n="intro" dir="auto">
           Hier informieren wir als Bündnis zur Abwahl des Oberbürgermeisters in Frankfurt am Main.
         </p>
 
@@ -184,7 +155,7 @@
             <button>
               ➜
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <span data-i18n="postal_voting_button">Briefwahl beantragen!</span>
+              <span data-i18n="postal_voting_button" dir="auto">Briefwahl beantragen!</span>
             </button>
           </a>
         </div>
@@ -226,5 +197,60 @@
         </details>
       </section>
     </main>
+    <script src="./js-yaml.min.js"></script>
+    
+    <script>
+      var current_locale = 'de'
+      var translated_texts = {}
+      var locales = []
+
+      function translateTexts() {
+        if (translated_texts[current_locale]) {
+          const elements = document.querySelectorAll('[data-i18n]')
+          elements.forEach(element => {
+            const key = element.getAttribute('data-i18n')
+            if (translated_texts[current_locale][key]) {
+              element.innerHTML = translated_texts[current_locale][key].replace(/\n/g, '<br>')
+            }
+          })
+        }
+      }
+      async function loadTexts() {
+        try {
+          const response = await fetch('./texts.yml')
+          const texts = await response.text()
+          const data = jsyaml.load(texts)
+          translated_texts = data.texts
+          delete data.texts // don't need this in the cache anymore
+          delete translated_texts._ // the default
+          locales = Object.keys(translated_texts).sort()
+          translateTexts()
+          setLocaleChooser()
+        } catch (error) {
+          console.log(error)
+        }
+      }
+      loadTexts()
+
+      function setLocaleChooser() {
+        const localeChooser = document.getElementById('locale_chooser')
+        if (localeChooser) {
+          localeChooser.innerHTML = ''
+          for (const locale of locales) {
+            const option = document.createElement('option')
+            option.value = locale
+            option.innerHTML = `${locale} — ${translated_texts[locale].locale_name}`
+            localeChooser.appendChild(option)
+          }
+          localeChooser.value = current_locale
+          localeChooser.addEventListener('change', event => {
+            current_locale = event.target.value
+            translateTexts()
+          })
+        }
+      }
+
+    </script>
+
   </body>
 </html>
