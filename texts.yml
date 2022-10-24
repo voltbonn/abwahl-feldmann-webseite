@@ -5,6 +5,7 @@ texts:
     slogan: Am 06.11.2022 mit JA stimmen!
     postal_voting_button: Briefwahl ab 26.09
     multi_locale_infos_button: Mehrsprachige Informationen
+    digital_flyer: Digitaler Flyer
     intro: |-
       Abwahl von OB Feldmann.
       Für einen Neuanfang in Frankfurt.
@@ -30,6 +31,7 @@ texts:
     slogan: Vote yes on 06.11.2022 
     postal_voting_button: Postal voting starts on 26.09.2022
     multi_locale_infos_button: Multilingual information
+    digital_flyer: Digital Flyer
     intro: |-
       Recall Mayor Feldmann.
       For a new beginning in Frankfurt.
@@ -62,6 +64,8 @@ texts:
       من 26.09.
     multi_locale_infos_button: |-
       معلومات متعددة اللغات
+    digital_flyer: |-
+      بروشور رقمي
     intro: |-
       الغاء اختيار رئيس البلدية فيلدمان.
       لبداية جديدة في فرانكفورت. 
@@ -89,6 +93,7 @@ texts:
     slogan: 06.11.2022. svojim DA!
     postal_voting_button: Poziv na glasovanje od 26.09.
     multi_locale_infos_button: Višejezične informacije
+    digital_flyer: Digitalni letak
     intro: |-
       Smijenite gradonačelnika Feldmanna.
       Za novi početak u Frankfurtu.
@@ -114,6 +119,7 @@ texts:
     slogan: 06.11.2022 выбери «ДА»!
     postal_voting_button: Заочное голосование с 26.09.
     multi_locale_infos_button: Информация на других языках
+    digital_flyer: Электронный листовка
     intro: |-
       Снимем с должности мэра Фельдмана.
       За новый старт для Франкфурта.
@@ -139,6 +145,7 @@ texts:
     slogan: 06.11.2022 r. zagłosuj na TAK!
     postal_voting_button: Głosowanie korespondencyjne od 26.09.
     multi_locale_infos_button: Informacje w innych językach
+    digital_flyer: Plakat cyfrowy
     intro: |-
       Głosowanie za odwołaniem nadburmistrza Feldmanna.
       Dla nowego początku we Frankfurcie.
@@ -164,6 +171,7 @@ texts:
     slogan: در تاریخ ۰۶/۱۱/۲۰۲۲ با گزینه « بله» رای بدهید!
     postal_voting_button: رای پستی از تاریخ ۲۶ سپتامبر 
     multi_locale_infos_button: معلومات در زبان های دیگر
+    digital_flyer: بروشور دیجیتال
     intro: |-
       انتخاب شهردار فیلدمن
       برای یک شروع جدید در فرانکفورت.
@@ -191,6 +199,7 @@ texts:
     slogan: 06.11.2022 tarihinde oyunu EVET olarak kullan
     postal_voting_button: 26.09. dan itibaren Mektupla oy kullanma
     multi_locale_infos_button: Diğer dillerdeki enformasyonlar
+    digital_flyer: Dijital Flyer
     intro: |-
       Büyükşehir Belediye Başkanı Feldmann seçilmemeli.
       Frankfurt’ta yeni bir başlangıç için.
@@ -216,6 +225,7 @@ texts:
     slogan: در تاریخ ۰۶/۱۱/۲۰۲۲ با گزینه « بلی» رای بدهید!
     postal_voting_button: رای پستی از تاریخ ۲۶ سپتامبر 
     multi_locale_infos_button: Multilingual Information
+    digital_flyer: بروشور دیجیتال
     intro: |-
       انتخاب شاروال فیلدمن
       برای یک شروع جدید در فرانکفورت.
