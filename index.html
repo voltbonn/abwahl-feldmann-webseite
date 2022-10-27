@@ -11,6 +11,7 @@
         --foreground-link-color: blue;
         --background-color: #f2f2f2;
         --button-background: #df4e90;
+        --button-background-rgb: 223, 78, 144;
         --on-button-background: white;
         --hover-opacity: 0.75;
         --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
@@ -24,7 +25,12 @@
         color: var(--foreground-color);
         font-family: var(--font-family);
         font-size: 1.5rem;
-        font-weight: 500;
+        font-weight: 400;
+      }
+
+      header {
+        color: var(--background-color);
+        background-color: var(--foreground-color);
       }
 
       p, ul, ol, li {
@@ -34,25 +40,25 @@
       h1 {
         font-size: 4rem;
         font-weight: 900;
-        margin: 4rem 0 1rem 0;
+        padding: 4rem 0 1rem 0;
       }
       h2 {
         font-size: 2rem;
         font-weight: 900;
-        margin: 2rem 0 1rem 0;
+        padding: 2rem 0 1rem 0;
       }
       h3 {
         font-size: 1.75rem;
         font-weight: 900;
-        margin: 2rem 0 1rem 0;
+        padding: 2rem 0 1rem 0;
       }
       h4 {
         font-size: 1.5rem;
         font-weight: 900;
-        margin: 2rem 0 1rem 0;
+        padding: 2rem 0 1rem 0;
       }
       p {
-        margin: 1rem 0;
+        padding: 1rem 0;
       }
       ul {
         margin-inline-start: 30px;
@@ -67,11 +73,13 @@
         margin: 1rem;
         padding: 1rem 2rem;
         border: 0;
+
+        border-radius: 1rem;
       }
       button.text {
         background-color: transparent;
         color: var(--button-background);
-        box-shadow: inset 0 0 0 0.25rem var(--button-background);
+        box-shadow: inset 0 0 0 0.15rem rgba(var(--button-background-rgb), 0.3);
       }
       button:hover {
         opacity: var(--hover-opacity);
@@ -95,22 +103,25 @@
       details > summary::-webkit-details-marker {
         display: none;
       }
-      details > summary h2::before {
+      details > summary h2::before,
+      details > summary h3::before {
         content: '➜';
         position: absolute;
         left: 0;
         filter: grayscale(1) brightness(0.75) contrast(2);
       }
-      details[open] > summary h2::before {
+      details[open] > summary h2::before,
+      details[open] > summary h3::before {
         transform: rotate(90deg);
       }
-      details > summary:hover {
-        opacity: var(--hover-opacity);
-      }
-      details > summary h2 {
+      details > summary h2,
+      details > summary h3 {
         display: inline-block;
         position: relative;
         padding-left: 3rem;
+      }
+      details > summary:hover {
+        opacity: var(--hover-opacity);
       }
 
       a {
@@ -125,26 +136,52 @@
         padding-bottom: 50vh;
       }
       section {
-        --padding: 20vw;
+        --padding: 10vw;
         padding: 0 var(--padding);
       }
       @media (max-width: 1000px) {
         section {
-          --padding: 10vw;
-        }
-      }
-      @media (max-width: 500px) {
-        section {
           --padding: 1rem;
         }
       }
-      section.socialmedia_grid {
+      
+      header {
+        margin-bottom: 4rem;
+      }
+      header .logo {
+        width: 8rem;
+        height: 8rem;
+      }
+      header h1,
+      header h2 {
+        padding: 0;
+      }
+      header h1 {
+        margin-top: -0.6rem;
+      }
+      header h2 {
+        margin-top: 2rem;
+      }
+      header section {
+        display: flex;
+        gap: 2rem;
+        padding: 4rem var(--padding);
+      }
+      @media (max-width: 1000px) {
+        header section {
+          flex-direction: column;
+        }
+      }
+
+
+      .socialmedia_grid {
+        display: none;
+
         margin: 0 auto;
         max-width: none;
         width: auto;
         font-size: 0;
 
-        display: flex;
         gap: 1rem;
         overflow: auto;
         scroll-snap-type: x mandatory;
@@ -155,62 +192,138 @@
         max-height: 80vh;
         scroll-snap-align: start;
       }
+      @media (max-width: 800px) {
+        .socialmedia_grid {
+          display: flex;
+        }
+      }
+
+      .insta_sidebar {
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+      }
+      .insta_sidebar img {
+        width: 18rem;
+        height: auto;
+      }
+      @media (max-width: 800px) {
+        .insta_sidebar {
+          display: none;
+        }
+      }
+
+      .two_columns {
+        columns: 2;
+      }
+      @media (max-width: 800px) {
+        .two_columns {
+          columns: 1;
+        }
+      }
     </style>
   </head>
-  <body>
-    <main>
+  <body dir="auto">
+    <header>
       <section>
-        <br />
-        <br />
-        <select id="locale_chooser"></select>
-
-        <h1 data-i18n="title" dir="auto">Abwahl von OB Feldmann.</h1>
-        <h2 data-i18n="slogan" dir="auto">Am 06.11.2022 mit JA stimmen!</h2>
-        
-        
-        <p data-i18n="intro" dir="auto">
-          Hier informieren wir als Bündnis zur Abwahl des Oberbürgermeisters in Frankfurt am Main.
-        </p>
-
-        <div class="buttonRow">
-          <a
-            href="https://wahlschein.ekom21.de/IWS/start.do?mb=6412000&wahltyp="
-            target="_blank"
-          >
-            <button>
-              ➜
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <span data-i18n="postal_voting_button" dir="auto">Briefwahl beantragen!</span>
-            </button>
-          </a>
+        <img class="logo" src="./images/logo.webp">
+        <div>
+          <h1 data-i18n="title">Abwahl von OB Feldmann.</h1>
         </div>
-
-        <div class="buttonRow">
-          <a
-            href="https://www.gruene-frankfurt.de/page/mehrsprachige-informationen-abwahl-ob-feldmann"
-            target="_blank"
-          >
-            <button class="text">
-              ➜
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <span data-i18n="multi_locale_infos_button" dir="auto">Mehrsprachige Informationen</span>
-            </button>
-          </a>
+        <div>
+          <select id="locale_chooser"></select>
         </div>
-
-        <br />
-        <br />
-        <!-- <h2 data-i18n="digital_flyer" dir="auto">Digitaler Flyer</h2> -->
       </section>
+    </header>
+
+    <main>
+
+      <section style="display: flex; gap: 2rem;">
+        <div>
+          <h2 data-i18n="slogan">Am 06.11.2022 mit JA stimmen!</h2>
+
+          <p data-i18n="intro" dir="auto">
+            Hier informieren wir als Bündnis zur Abwahl des Oberbürgermeisters in Frankfurt am Main.
+          </p>
+
+          <div class="buttonRow">
+            <a
+              href="https://wahlschein.ekom21.de/IWS/start.do?mb=6412000&wahltyp="
+              target="_blank"
+            >
+              <button>
+                ➜
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span data-i18n="postal_voting_button" dir="auto">Briefwahl beantragen!</span>
+              </button>
+            </a>
+          </div>
+
+          <div class="buttonRow">
+            <a
+              href="https://www.gruene-frankfurt.de/page/mehrsprachige-informationen-abwahl-ob-feldmann"
+              target="_blank"
+            >
+              <button class="text">
+                ➜
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span data-i18n="multi_locale_infos_button" dir="auto">Mehrsprachige Informationen</span>
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="insta_sidebar">
+          <img src="./images/insta_sidebar_1.webp" alt="Abwahl von OB Feldmann! — Neustart für Frankfurt" />
+          <img src="./images/insta_sidebar_2.webp" alt="Für ein Kreuz vergessen wir alle Farben. — Abwahl von OB Feldmann. Für einen Neuanfang in Frankfurt. Mit Respekt vor dem Amt des Stadtoberhauptes." />
+          <img src="./images/insta_sidebar_3.webp" alt="am 06.11.2022 mit JA stimmen! — Briefwahl ab 26.09." />
+        </div>
+      </section>
+
+      <br />
+      <br />
+      <!-- <h2 data-i18n="digital_flyer" dir="auto">Digitaler Flyer</h2> -->
 
       <section class="socialmedia_grid">
-        <img src="./images/1_Feldmann_SoMe_9x167.jpg" alt="Social Media Story 1" />
-        <img src="./images/2_Feldmann_SoMe_9x164.png" alt="Social Media Story 2" />
-        <img src="./images/3_Feldmann_SoMe_9x162.png" alt="Social Media Story 3" />
-        <img src="./images/4_Feldmann_SoMe_9x168.jpg" alt="Social Media Story 4" />
+        <img src="./images/1_Feldmann_SoMe_9x168.jpg" alt="Abwahl von OB Feldmann! — Neustart für Frankfurt!" />
+        <img src="./images/2_Feldmann_SoMe_9x164.png" alt="Für ein Kreuz vergessen wir alle Farben. — Abwahl von OB Feldmann. Für einen Neuanfang in Frankfurt. Mit Respekt vor dem Amt des Stadtoberhauptes." />
+        <img src="./images/3_Feldmann_SoMe_9x162.png" alt="Abwahl von OB Feldmann! Am 06.11.2022 mit JA stimmen! — Briefwahl ab 26.09." />
+        <!-- <img src="./images/4_Feldmann_SoMe_9x167.jpg" /> -->
       </section>
 
-      <section>
+      <section dir="auto">
+        <br />
+        <br />
+
+        <h2>FAQ</h2>
+
+        <details>
+          <summary>
+            <h3>Worum geht es eigentlich?</h3>
+          </summary>
+          
+          <p>Am 14. Juli 2022 hat das Stadtparlament Frankfurt am Main in seiner 14. Sitzung die Abwahl des Oberbürgermeisters Peter Feldmann mit einer Zweidrittel-Mehrheit beschlossen. Somit wurde die Entscheidung, ob Peter Feldmann im Amt bleibt oder nicht, in die Hände der Bürgerinnen und Bürger gelegt. Diese können am 06.11. in dem Ihnen zugewiesenen Wahllokal, oder per Briefwahl, ihre Stimme abgeben. Weitere Informationen zur Wahl befinden sich auf <a href="https://frankfurt.de/wahlen">frankfurt.de/wahlen</a>.</p>
+        </details>
+
+        <details>
+          <summary>
+            <h3>Warum soll Peter Feldmann abgewählt werden?</h3>
+          </summary>
+          
+          <p>Das Amt des Oberbürgermeisters vertritt die gesamte Stadt Frankfurt am Main und bedarf daher einer Person mit entsprechendem Ansehen. Herr Peter Feldmann hat dieses Ansehen durch diverse Fehltritte und durch wiederholtes Fehlverhalten verloren.</p>
+        </details>
+
+        <details>
+          <summary>
+            <h3>Was hat Peter Feldmann eigentlich getan?</h3>
+          </summary>
+          
+          <p>Peter Feldmann nutzt offizielle Kommunikationskanäle, um private Meinungen zu äußern und öffentliche Auftritte, um sich persönlich daran zu bereichern. So nahm er sich den Europa-League-Pokal der Frankfurter Eintracht, weil er nach eigener Aussage „den Pokal unbedingt anfassen wollte“ und „erschrak“, nach eigener Aussage, selbst vor den sexistischen Aussagen, die er am Tag zuvor dem weiblichen Flugpersonal auf dem Rückflug nach Frankfurt machte (s. Pressekonferenz 25.05.2022). Er scheint nicht mehr zwischen seiner Person und seinem Amt zu unterscheiden.</p>
+
+          <p>Der Eindruck wird dadurch verstärkt, dass Peter Feldmann außerdem zurzeit wegen des Verdachts auf Vorteilsannahme vor Gericht steht. Ihm wird vorgeworfen, seiner Frau eine Anstellung mit überdurchschnittlicher Vergütung durch sein Amt als Oberbürgermeister ermöglicht zu haben. Natürlich gilt die Unschuldsvermutung, bis es zu einer möglichen Verurteilung oder Freisprechung kommt, jedoch wurde bereits zum Prozessbeginn deutlich, dass Peter Feldmann sein Amt nicht mehr erfüllen kann. Er musste bei der Begrüßung des spanischen Königs zur Buchmesse 2022 vertreten werden, weil er am gleichen Tag wegen seines Verfahrens vor Gericht erscheinen musste.</p>
+        </details>
+
+        <hr />
+
         <!--
         <h2>Unterstützende Parteien</h2>
         <img src="logo1.png" alt="Logo 1" />
@@ -218,7 +331,6 @@
         <img src="logo3.png" alt="Logo 3" />
         -->
 
-        <hr />
 
         <details>
           <summary>
@@ -339,12 +451,11 @@
 
           <p>Die jeweils aktuelle Datenschutzerklärung können Sie jederzeit auf unserer Website unter <a href="https://neustartffm.de">neustartffm.de</a> abrufen und ausdrucken.
         </details>
-
+      
         <hr />
 
         <strong>Website Programmierung:</strong> <a href="https://thomasrosen.me" target="_blank">Thomas Rosen</a><br/>
         <strong>Quellcode der Website:</strong> <a href="https://github.com/voltbonn/abwahl-feldmann-webseite/" target="_blank">GitHub</a>
-
       </section>
     </main>
     
