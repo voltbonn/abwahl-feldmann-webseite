@@ -154,7 +154,8 @@
       header {
         color: var(--background-color);
         background-color: var(--foreground-color);
-        margin: 2rem;
+        --header-margin: 2rem;
+        margin: var(--header-margin);
         border-radius: 3rem;
       }
       header .logo {
@@ -174,7 +175,7 @@
       header section {
         display: flex;
         gap: 2rem;
-        padding: 4rem;
+        padding: 4rem max(4rem, calc(var(--padding) - var(--header-margin)));
       }
       @media (max-width: 1000px) {
         header section {
