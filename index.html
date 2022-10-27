@@ -221,6 +221,24 @@
           columns: 1;
         }
       }
+
+      .download_previews {
+        display: flex;
+
+        margin: 0 auto;
+        max-width: none;
+        width: auto;
+
+        gap: 1rem;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding: var(--padding);
+      }
+      .download_previews img {
+        max-width: 100%;
+        max-height: 60vh;
+        scroll-snap-align: start;
+      }
     </style>
   </head>
   <body dir="auto">
@@ -288,6 +306,29 @@
         <img src="./assets/2_Feldmann_SoMe_9x164.png" alt="Für ein Kreuz vergessen wir alle Farben. — Abwahl von OB Feldmann. Für einen Neuanfang in Frankfurt. Mit Respekt vor dem Amt des Stadtoberhauptes." />
         <img src="./assets/3_Feldmann_SoMe_9x162.png" alt="Abwahl von OB Feldmann! Am 06.11.2022 mit JA stimmen! — Briefwahl ab 26.09." />
         <!-- <img src="./assets/4_Feldmann_SoMe_9x167.jpg" /> -->
+      </section>
+
+      <section dir="auto">
+        <br />
+        <br />
+
+        <h2>Downloads</h2>
+
+        <div class="download_previews buttonRow">
+          <a href="./assets/Referendum_Feldmann_Flyer_DINlang.pdf" target="_blank">
+            <button class="text">
+              <p style="white-space: nowrap;">DIN-Lang Flyer (DE)</p>
+              <img src="./assets/Referendum_Feldmann_Flyer_DINlang.jpg" alt="DIN-Lang Flyer (DE)">
+            </button>
+          </a>
+          <a href="./assets/Referendum_Feldmann_Plakat_A1.pdf" target="_blank">
+            <button class="text">
+              <p style="white-space: nowrap;">A1 Plakat (DE)</p>
+              <img src="./assets/Referendum_Feldmann_Plakat_A1.jpg" alt="A1 Plakat (DE)">
+            </button>
+          </a>
+        </div>
+
       </section>
 
       <section dir="auto">
