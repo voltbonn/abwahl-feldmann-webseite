@@ -11,6 +11,7 @@
         --foreground-link-color: blue;
         --background-color: #f2f2f2;
         --button-background: #df4e90;
+        --button-background-rgb: 223, 78, 144;
         --on-button-background: white;
         --hover-opacity: 0.75;
         --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";;
@@ -78,7 +79,7 @@
       button.text {
         background-color: transparent;
         color: var(--button-background);
-        box-shadow: inset 0 0 0 0.25rem var(--button-background);
+        box-shadow: inset 0 0 0 0.15rem rgba(var(--button-background-rgb), 0.3);
       }
       button:hover {
         opacity: var(--hover-opacity);
