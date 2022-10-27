@@ -143,27 +143,10 @@
           --padding: 1rem;
         }
       }
-      section.socialmedia_grid {
-        margin: 0 auto;
-        max-width: none;
-        width: auto;
-        font-size: 0;
-
-        display: flex;
-        gap: 1rem;
-        overflow: auto;
-        scroll-snap-type: x mandatory;
-        scroll-padding: var(--padding);
-      }
-      .socialmedia_grid img {
-        max-width: 100%;
-        max-height: 80vh;
-        scroll-snap-align: start;
       
       header {
         margin-bottom: 4rem;
       }
-
       header .logo {
         width: 8rem;
         height: 8rem;
@@ -187,7 +170,47 @@
         header section {
           flex-direction: column;
         }
-      } 
+      }
+
+
+      .socialmedia_grid {
+        display: none;
+
+        margin: 0 auto;
+        max-width: none;
+        width: auto;
+        font-size: 0;
+
+        gap: 1rem;
+        overflow: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding: var(--padding);
+      }
+      .socialmedia_grid img {
+        max-width: 100%;
+        max-height: 80vh;
+        scroll-snap-align: start;
+      }
+      @media (max-width: 800px) {
+        .socialmedia_grid {
+          display: flex;
+        }
+      }
+
+      .insta_sidebar {
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+      }
+      .insta_sidebar img {
+        width: 18rem;
+        height: auto;
+      }
+      @media (max-width: 800px) {
+        .insta_sidebar {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body dir="auto">
@@ -204,47 +227,56 @@
       </section>
     </header>
 
-      <section>
-        <p data-i18n="intro" dir="auto">
-          Hier informieren wir als Bündnis zur Abwahl des Oberbürgermeisters in Frankfurt am Main.
-        </p>
+    <main>
 
-        <div class="buttonRow">
-          <a
-            href="https://wahlschein.ekom21.de/IWS/start.do?mb=6412000&wahltyp="
-            target="_blank"
-          >
-            <button>
-              ➜
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <span data-i18n="postal_voting_button" dir="auto">Briefwahl beantragen!</span>
-            </button>
-          </a>
+      <section style="display: flex; gap: 2rem;">
+        <div>
+          <p data-i18n="intro" dir="auto">
+            Hier informieren wir als Bündnis zur Abwahl des Oberbürgermeisters in Frankfurt am Main.
+          </p>
+
+          <div class="buttonRow">
+            <a
+              href="https://wahlschein.ekom21.de/IWS/start.do?mb=6412000&wahltyp="
+              target="_blank"
+            >
+              <button>
+                ➜
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span data-i18n="postal_voting_button" dir="auto">Briefwahl beantragen!</span>
+              </button>
+            </a>
+          </div>
+
+          <div class="buttonRow">
+            <a
+              href="https://www.gruene-frankfurt.de/page/mehrsprachige-informationen-abwahl-ob-feldmann"
+              target="_blank"
+            >
+              <button class="text">
+                ➜
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span data-i18n="multi_locale_infos_button" dir="auto">Mehrsprachige Informationen</span>
+              </button>
+            </a>
+          </div>
         </div>
-
-        <div class="buttonRow">
-          <a
-            href="https://www.gruene-frankfurt.de/page/mehrsprachige-informationen-abwahl-ob-feldmann"
-            target="_blank"
-          >
-            <button class="text">
-              ➜
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <span data-i18n="multi_locale_infos_button" dir="auto">Mehrsprachige Informationen</span>
-            </button>
-          </a>
+        <div class="insta_sidebar">
+          <img src="./images/insta_sidebar_1.webp" alt="Abwahl von OB Feldmann! — Neustart für Frankfurt" />
+          <img src="./images/insta_sidebar_2.webp" alt="Für ein Kreuz vergessen wir alle Farben. — Abwahl von OB Feldmann. Für einen Neuanfang in Frankfurt. Mit Respekt vor dem Amt des Stadtoberhauptes." />
+          <img src="./images/insta_sidebar_3.webp" alt="am 06.11.2022 mit JA stimmen! — Briefwahl ab 26.09." />
         </div>
-
-        <br />
-        <br />
-        <!-- <h2 data-i18n="digital_flyer" dir="auto">Digitaler Flyer</h2> -->
       </section>
 
+      <br />
+      <br />
+      <!-- <h2 data-i18n="digital_flyer" dir="auto">Digitaler Flyer</h2> -->
+
       <section class="socialmedia_grid">
-        <img src="./images/1_Feldmann_SoMe_9x167.jpg" alt="Social Media Story 1" />
-        <img src="./images/2_Feldmann_SoMe_9x164.png" alt="Social Media Story 2" />
-        <img src="./images/3_Feldmann_SoMe_9x162.png" alt="Social Media Story 3" />
-        <img src="./images/4_Feldmann_SoMe_9x168.jpg" alt="Social Media Story 4" />
+        <img src="./images/1_Feldmann_SoMe_9x168.jpg" alt="Abwahl von OB Feldmann! — Neustart für Frankfurt!" />
+        <img src="./images/2_Feldmann_SoMe_9x164.png" alt="Für ein Kreuz vergessen wir alle Farben. — Abwahl von OB Feldmann. Für einen Neuanfang in Frankfurt. Mit Respekt vor dem Amt des Stadtoberhauptes." />
+        <img src="./images/3_Feldmann_SoMe_9x162.png" alt="Abwahl von OB Feldmann! Am 06.11.2022 mit JA stimmen! — Briefwahl ab 26.09." />
+        <!-- <img src="./images/4_Feldmann_SoMe_9x167.jpg" /> -->
       </section>
 
       <section dir="auto">
