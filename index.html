@@ -162,14 +162,31 @@
         max-height: 80vh;
         scroll-snap-align: start;
       }
+
+      header .logo {
+        width: 8rem;
+        height: 8rem;
+      }
+      header h1,
+      header h2 {
+        padding: 0;
+      }
+      header section {
+        display: flex;
+        gap: 2rem;
+        padding: 2rem var(--padding);
+      }
     </style>
   </head>
   <body>
     <main>
       <header>
         <section>
-          <h1 data-i18n="title" dir="auto">Abwahl von OB Feldmann.</h1>
-          <h2 data-i18n="slogan" dir="auto">Am 06.11.2022 mit JA stimmen!</h2>
+          <img class="logo" src="./images/logo.webp">
+          <div>
+            <h1 data-i18n="title" dir="auto">Abwahl von OB Feldmann.</h1>
+            <h2 data-i18n="slogan" dir="auto">Am 06.11.2022 mit JA stimmen!</h2>
+          </div>
         </section>
       </header>
 
