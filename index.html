@@ -164,6 +164,9 @@
         max-width: 100%;
         max-height: 80vh;
         scroll-snap-align: start;
+      
+      header {
+        margin-bottom: 4rem;
       }
 
       header .logo {
@@ -183,7 +186,7 @@
       header section {
         display: flex;
         gap: 2rem;
-        padding: 2rem var(--padding);
+        padding: 4rem var(--padding);
       }
       @media (max-width: 1000px) {
         header section {
@@ -192,23 +195,19 @@
       } 
     </style>
   </head>
-  <body>
-    <main dir="auto">
-      <header>
-        <section>
-          <img class="logo" src="./images/logo.webp">
-          <div>
-            <h1 data-i18n="title">Abwahl von OB Feldmann.</h1>
-            <h2 data-i18n="slogan">Am 06.11.2022 mit JA stimmen!</h2>
-          </div>
-        </section>
-      </header>
-
+  <body dir="auto">
+    <header>
       <section>
-        <br />
-        <br />
-        <select id="locale_chooser"></select>
+        <img class="logo" src="./images/logo.webp">
+        <div>
+          <h1 data-i18n="title">Abwahl von OB Feldmann.</h1>
+          <h2 data-i18n="slogan">Am 06.11.2022 mit JA stimmen!</h2>
+        </div>
+        <div>
+          <select id="locale_chooser"></select>
+        </div>
       </section>
+    </header>
 
       <section>
         <p data-i18n="intro" dir="auto">
